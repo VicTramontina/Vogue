@@ -1,0 +1,31 @@
+points:
+  zones:
+    main:
+      rows:
+        bottom:
+        home:
+        top:
+        num:
+      columns:
+        pinky:
+          key.stagger: 0
+        ring:
+          key.stagger: 0
+        middle:
+          key.stagger: 8
+        index:
+          key.stagger: 8
+        inner:
+          key.stagger: -8
+        aditional:
+          key.stagger: -8
+    thumb: 
+      anchor: 
+        ref: main_aditional_bottom
+        shift: [0,-25]
+        rotate: -45
+      rows:
+      columns:
+        one:
+        two:
+          key.stagger: -1
