@@ -5,7 +5,7 @@ units:
   $default_height: 'U-1'
   $default_width: 'U-1'
   $default_padding: 'U'
-  $default_autobind: 10
+  $default_autobind: 15
 points:
   zones:
     main:
@@ -41,17 +41,23 @@ points:
     ref: thumb_two
     distance: 30
 outlines:
-  _switches:
+  _main_board:
     - what: rectangle
-      where: true
-      size: [14, 14]
+      where: -main_aditional_bottom
+      size: ['U', 'U']
       bound: true
-  board:
-    - what: outline
-      name: _switches
       expand: 2
       fillet: 1
-
+  _thumb_connector:
+    - what: rectangle
+      where: main_aditional_bottom
+      size: ['U', 50]
+      bound: true
+      expand: 2
+      fillet: 1
+  board: 
+    - _main_board
+    - _thumb_connector
 pcbs:
   main_pcb:
     outlines:
