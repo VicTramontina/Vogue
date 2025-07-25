@@ -1,3 +1,11 @@
+units:
+  $default_stagger: 0
+  $default_spread: 'U'
+  $default_splay: 0
+  $default_height: 'U-1'
+  $default_width: 'U-1'
+  $default_padding: 'U'
+  $default_autobind: 10
 points:
   zones:
     main:
@@ -19,13 +27,16 @@ points:
           key.stagger: -8
         aditional:
           key.stagger: -8
-    thumb: 
-      anchor: 
+    thumb:
+      anchor:
         ref: main_aditional_bottom
-        shift: [0,-25]
+        shift: [ 0,-25 ]
         rotate: -45
       rows:
       columns:
         one:
         two:
           key.stagger: -1
+  mirror:
+    ref: thumb_two
+    distance: 30
