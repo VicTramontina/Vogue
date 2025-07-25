@@ -1,14 +1,16 @@
 units:
-  $default_stagger: 0
-  $default_spread: 'U'
-  $default_splay: 0
-  $default_height: 'U-1'
-  $default_width: 'U-1'
-  $default_padding: 'U'
-  $default_autobind: 15
+  # Proxy Spacing Variables
+  kx: U
+  ky: U
+  # Padding Variables
+  px: kx + 2
+  py: ky + 2
 points:
   zones:
     main:
+      key:
+        padding: 1ky
+        spread: 1kx
       rows:
         bottom:
         home:
@@ -28,6 +30,9 @@ points:
         aditional:
           key.stagger: -8
     thumb:
+      key:
+        padding: 1ky
+        spread: 1kx
       anchor:
         ref: main_aditional_bottom
         shift: [ 0,-25 ]
@@ -37,21 +42,18 @@ points:
         one:
         two:
           key.stagger: -1
-  mirror:
-    ref: thumb_two
-    distance: 30
 outlines:
   _main_board:
     - what: rectangle
       where: -main_aditional_bottom
-      size: ['U', 'U']
+      size: [px, py]
       bound: true
       expand: 2
       fillet: 1
   _thumb_connector:
     - what: rectangle
       where: main_aditional_bottom
-      size: ['U', 50]
+      size: [px, 50]
       bound: true
       expand: 2
       fillet: 1
@@ -61,19 +63,6 @@ outlines:
 pcbs:
   main_pcb:
     outlines:
-      board:
+      main: 
         outline: board
-    footprints:
-      keys:
-        what: mx
-        where: true
-        params:
-          hotswap: true
-          from: "{{column_net}}"
-          to: "{{row_net}}"
-
-cases:
-  main_case:
-    - what: outline
-      name: board
-      extrude: 5
+    
