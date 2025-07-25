@@ -40,3 +40,34 @@ points:
   mirror:
     ref: thumb_two
     distance: 30
+outlines:
+  _switches:
+    - what: rectangle
+      where: true
+      size: [14, 14]
+      bound: true
+  board:
+    - what: outline
+      name: _switches
+      expand: 2
+      fillet: 1
+
+pcbs:
+  main_pcb:
+    outlines:
+      board:
+        outline: board
+    footprints:
+      keys:
+        what: mx
+        where: true
+        params:
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{row_net}}"
+
+cases:
+  main_case:
+    - what: outline
+      name: board
+      extrude: 5
