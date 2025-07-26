@@ -8,14 +8,16 @@ units:
 points:
   zones:
     main:
+      anchor:
+        shift: [150, -150]
       key:
         padding: 1ky
         spread: 1kx
       rows:
         bottom:
         home:
-        top:
         num:
+        top:
       columns:
         pinky:
           key.stagger: 0
@@ -41,7 +43,7 @@ points:
       columns:
         one:
         two:
-          key.stagger: -1
+          key.stagger: -kx/2
 outlines:
   _main_board:
     - what: rectangle
@@ -57,12 +59,55 @@ outlines:
       bound: true
       expand: 2
       fillet: 1
+  _microcontroller:
+    - what: rectangle
+      where: main_aditional_top
+      size: [65, 40]
+  _reset:
+    - what: rectangle
+      where: main_aditional_num
+      size: [65, 25]
   board: 
     - _main_board
     - _thumb_connector
+    - _microcontroller
+    - _reset
 pcbs:
   main_pcb:
     outlines:
       main: 
         outline: board
-    
+    footprints:
+      mx_hotswap:
+        what: mx
+        where: true
+        params:
+          keycaps: false
+          reverse: true
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro
+        params:
+          orientation: "down"
+        where:
+          ref: main_aditional_top
+          shift: [px, 0]
+          rotate: -90
+      reset:
+        what: button
+        params:
+          from: GND
+          to: RST
+        where:
+          ref: main_aditional_num
+          shift: [px, -5]
