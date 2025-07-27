@@ -9,7 +9,7 @@ points:
   zones:
     main:
       anchor:
-        shift: [150, -150]
+        shift: [ 150, -150 ]
       key:
         padding: 1ky
         spread: 1kx
@@ -62,28 +62,28 @@ outlines:
   _main_board:
     - what: rectangle
       where: -main_aditional_bottom
-      size: [px, py]
+      size: [ px, py ]
       bound: true
       expand: 2
       fillet: 1
   _thumb_connector:
     - what: rectangle
       where: main_aditional_bottom
-      size: [px, 50]
+      size: [ px, 50 ]
       bound: true
       expand: 2
       fillet: 1
   _microcontroller:
     - what: rectangle
       where: main_aditional_top
-      size: [px*3, 40]
+      size: [ px*3, 40 ]
       fillet: 1
   _reset:
     - what: rectangle
       where: main_aditional_num
-      size: [px*3, 20]
+      size: [ px*3, 20 ]
       fillet: 1
-  board: 
+  board:
     - _main_board
     - _thumb_connector
     - _microcontroller
@@ -91,7 +91,7 @@ outlines:
 pcbs:
   main_pcb:
     outlines:
-      main: 
+      main:
         outline: board
     footprints:
       mx_hotswap:
@@ -110,14 +110,14 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -5]
+          shift: [ 0, -5 ]
       promicro:
         what: promicro
         params:
           orientation: "down"
         where:
           ref: main_aditional_top
-          shift: [px, 2]
+          shift: [ px, 2 ]
           rotate: -90
       reset:
         what: button
@@ -126,13 +126,13 @@ pcbs:
           to: RST
         where:
           ref: main_aditional_num
-          shift: [14, -2]
+          shift: [ 14, -2 ]
           rotate: 90
       trrs:
         what: trrs
         where:
-          ref: main_aditional_num 
-          shift: [31.5, -4]
+          ref: main_aditional_num
+          shift: [ 31.5, -4 ]
           rotate: 270
         params:
           reverse: true
