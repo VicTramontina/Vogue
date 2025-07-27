@@ -13,24 +13,34 @@ points:
       key:
         padding: 1ky
         spread: 1kx
-      rows:
-        bottom:
-        home:
-        num:
-        top:
       columns:
         pinky:
           key.stagger: 0
+          key.column_net: P14
         ring:
           key.stagger: 0
+          key.column_net: P16
         middle:
           key.stagger: 8
+          key.column_net: P10
         index:
           key.stagger: 8
+          key.column_net: P07
         inner:
           key.stagger: -8
+          key.column_net: P08
         aditional:
           key.stagger: -8
+          key.column_net: P09
+      rows:
+        bottom:
+          row_net: P18
+        home:
+          row_net: P19
+        num:
+          row_net: P20
+        top:
+          row_net: P21
     thumb:
       key:
         padding: 1ky
@@ -40,10 +50,14 @@ points:
         shift: [ 0,-25 ]
         rotate: -45
       rows:
+        main:
+          row_net: P15
       columns:
         one:
+          key.column_net: P08
         two:
           key.stagger: -kx/2
+          key.column_net: P09
 outlines:
   _main_board:
     - what: rectangle
@@ -62,11 +76,13 @@ outlines:
   _microcontroller:
     - what: rectangle
       where: main_aditional_top
-      size: [65, 40]
+      size: [px*3, 40]
+      fillet: 1
   _reset:
     - what: rectangle
       where: main_aditional_num
-      size: [65, 25]
+      size: [px*3, 20]
+      fillet: 1
   board: 
     - _main_board
     - _thumb_connector
@@ -101,7 +117,7 @@ pcbs:
           orientation: "down"
         where:
           ref: main_aditional_top
-          shift: [px, 0]
+          shift: [px, 2]
           rotate: -90
       reset:
         what: button
@@ -110,4 +126,18 @@ pcbs:
           to: RST
         where:
           ref: main_aditional_num
-          shift: [px, -5]
+          shift: [14, -2]
+          rotate: 90
+      trrs:
+        what: trrs
+        where:
+          ref: main_aditional_num 
+          shift: [31.5, -4]
+          rotate: 270
+        params:
+          reverse: true
+          symmetric: true
+          A: VCC
+          B: VCC
+          C: GND
+          D: P0
