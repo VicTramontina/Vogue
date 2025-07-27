@@ -1,0 +1,11 @@
+{
+  "name": "voyager",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "make": "ergogen ."
+  },
+  "dependencies": {
+    "ergogen": "^4.1.0"
+  }
+}
