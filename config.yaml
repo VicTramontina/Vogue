@@ -144,19 +144,20 @@ pcbs:
       holeTopLeft:
         what: mountinghole
         where:
-          ref: main_pinky_num
+          ref: main_pinky_top
+          shift: [ 0.5kx, -0.5ky ]
+      holeBottomLeft:
+        what: mountinghole
+        where:
+          ref: main_pinky_home
           shift: [ 0.5kx, -0.5ky ]
       holeTopRight:
         what: mountinghole
         where:
           ref: main_aditional_top
           shift: [ 0, 0.67ky ]
-      holeBottom:
+      holeBottomRight:
         what: mountinghole
         where:
           ref: main_aditional_bottom
           shift: [ 0kx, -0.57ky ]
-cases:
-  bottom:
-    - name: board
-      extrude: 1
