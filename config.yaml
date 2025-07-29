@@ -119,6 +119,16 @@ pcbs:
           ref: main_aditional_top
           shift: [ px, 2 ]
           rotate: -90
+      oled:
+        what: oled
+        params:
+          side: "F"
+          SDA: P2
+          SCL: P3
+        where:
+          ref: main_aditional_top
+          shift: [ px - 6, -17 ]
+          rotate: 90
       reset:
         what: button
         params:
@@ -126,13 +136,13 @@ pcbs:
           to: RST
         where:
           ref: main_aditional_num
-          shift: [ 14, -2 ]
+          shift: [ 14, -4 ]
           rotate: 90
       trrs:
         what: trrs
         where:
           ref: main_aditional_num
-          shift: [ 31.5, -4 ]
+          shift: [ 31.5, -6 ]
           rotate: 270
         params:
           reverse: true

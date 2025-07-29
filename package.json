@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "make": "ergogen ."
+    "build": "ergogen ."
   },
   "dependencies": {
     "ergogen": "^4.1.0"

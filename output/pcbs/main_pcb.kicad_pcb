@@ -2499,13 +2499,32 @@
       )
         
 
+        (module lib:OLED_headers (layer F.Cu) (tedit 5E1ADAC2)
+        (at 260.3 109.85 90) 
+
+                
+        (fp_text reference "OLED1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+        (fp_text value OLED (at 0 -7.3) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
+
+        
+        (pad 4 thru_hole oval (at 1.6 2.18 360) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (net 44 "P2"))
+        (pad 3 thru_hole oval (at 1.6 4.72 360) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (net 45 "P3"))
+        (pad 2 thru_hole oval (at 1.6 7.26 360) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (net 41 "VCC"))
+        (pad 1 thru_hole rect (at 1.6 9.8 360) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
+        (net 39 "GND"))
+        )
+        
+
     
     (module E73:SW_TACT_ALPS_SKQGABE010 (layer F.Cu) (tstamp 5BF2CC94)
 
         (descr "Low-profile SMD Tactile Switch, https://www.e-switch.com/product-catalog/tact/product-lines/tl3342-series-low-profile-smt-tact-switch")
         (tags "SPST Tactile Switch")
 
-        (at 259.25 113.89999999999999 90)
+        (at 259.25 115.89999999999999 90)
         
         (fp_text reference "B1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         (fp_text value "" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
@@ -2532,7 +2551,7 @@
         
       (module TRRS-PJ-320A-dual (layer F.Cu) (tedit 5970F8E5)
 
-      (at 276.75 115.89999999999999 270)   
+      (at 276.75 117.89999999999999 270)   
 
       
       (fp_text reference "TRRS1" (at 0 14.2) (layer Dwgs.User) (effects (font (size 1 1) (thickness 0.15))))
