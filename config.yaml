@@ -25,13 +25,13 @@ points:
           key.column_net: P10
         index:
           key.stagger: 8
-          key.column_net: P07
+          key.column_net: P7
         inner:
           key.stagger: -8
-          key.column_net: P08
+          key.column_net: P8
         aditional:
           key.stagger: -8
-          key.column_net: P09
+          key.column_net: P9
       rows:
         bottom:
           row_net: P18
@@ -54,10 +54,10 @@ points:
           row_net: P15
       columns:
         one:
-          key.column_net: P08
+          key.column_net: P8
         two:
           key.stagger: -kx/2
-          key.column_net: P09
+          key.column_net: P9
 outlines:
   _main_board:
     - what: rectangle
